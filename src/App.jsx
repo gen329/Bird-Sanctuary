@@ -1,7 +1,7 @@
 import React from "react";
 // import Cart from "./Components/Cart.jsx";
-import Checkout from "./Components/Checkout.jsx";
 // import BirdCards from "./Components/BirdCards.jsx";
+import Checkout from "./Components/Checkout.jsx";
 import { useState } from "react";
 
 function App () {

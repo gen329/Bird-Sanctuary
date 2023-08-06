@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 
 function Checkout() {
   const [user, setUser] = useState({
@@ -9,7 +10,7 @@ function Checkout() {
     zipcode: " ",
   })
   function handleSubmit(e) {
-    event.preventDefault();
+    e.preventDefault();
     resetForm()
   }
 
@@ -25,7 +26,7 @@ function Checkout() {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="submitForm">
         <h3>Checkout</h3>
         <label htmlFor="name">First Name</label>
         <input

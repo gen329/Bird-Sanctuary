@@ -1,8 +1,16 @@
 import React from "react";
 
-// sections of birds that have name, img, amount
-// adopt button for each bird 'Adopt'
-// ea. bird className of birds
 
-
-export default BirdCards;
+export default function BirdCards({bird, setCart}){
+  function addCart(newBird){
+      setCart((prev)=>[...prev,newBird]);
+  }
+    return (
+        <li key={bird.id}>
+            <h5>{bird.name}</h5>
+            <h6>Price: ${bird.amount}</h6>
+            <img src={bird.img}></img>
+            <button onClick={()=>addCart(bird)}>Adopt</button>
+        </li>
+    )
+}
